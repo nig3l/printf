@@ -1,0 +1,41 @@
+./" This is the manpage for the _printf function
+.TH man 3 "18-04-2022" "_printf"
+
+.SH NAME
+.B _printf
+- This is a formatted output conversion
+
+.SH SYNOPSIS
+.B #include \(dqmain.h\(dq
+
+.B int _printf(const char *
+.I format
+.B , ...);
+
+.SH DESCRIPTION
+The function _printf is a variadic function that produces a string according to a specified format
+and prints it to the standard output, much like the C standard library function printf. It can receive a arbitrary number of arguments.
+
+.B Return value
+On success, _printf returns the number of characters that are printed. If the format is NULL or if the functions encounters any error, it returns -1.
+
+.B Conversion specifiers
+These are the characters that specify the type of the variable that needs to be printed.
+
+.B Format string
+The format string can contain any characters, just like a regular string, in double quotes, which will be printed as is.
+However, this format string can contain conversion specifiers. These start with a %, and are followed with a character.
+
+The variables to be printed are separated from the format string with a comma. Each variable passed to _printf need to have a conversion specifier.
+
+.B d, i
+- These are specifiers are for integer arguments. They convert the variable to a decimal.
+.B c
+- Prints a character.
+
+.B s
+- Prints a string.
+
+.SH SEE ALSO
+.I _putchar.c
+.I printf(3)
